@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accepter la demande de contact</title>
+</head>
+<body>
+    <h1>Accepter la demande d'ami de {{ sender }} ?</h1>
+    <form action="/accept_friend_/{{ sender }}" method="post">
+        <label><input type="radio" name="accept" value="yes"/>Oui</label>
+        <label><input type="radio" name="accept" value="no"/>Non</label>
+        <br>
+        <button type="submit">Confirmer</button>
+    </form>
+</body>
+</html>
+
+<style>
+
+label{
+    padding: 20px;
+}
+</style>

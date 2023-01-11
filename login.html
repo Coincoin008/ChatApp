@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+</head>
+<body>
+    <h1>Se connecter</h1>
+    <form action="/login-f" method="post">
+        <input type="text" name="name" placeholder="Votre nom"/> <br>
+        <input type="password" name="password" placeholder="Votre mot de passe"/> <br>
+        <button type="submit">Se connecter</button>
+    </form>
+    <a href="/signup">Vous n'avez pas encore crée de compte ?</a>
+    <p id="error">{{ error }}</p>
+
+</body>
+</html>
+
+
+<style>
+
+form {
+    margin-bottom: 30px;
+}
+
+input, button {
+    font-size: 15px;
+    margin: 10px;
+}
+
+
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#error {
+    color: red
+}
+
+
+</style>

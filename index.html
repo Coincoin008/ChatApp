@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Bienvenue {{ name }} !</h1>
+    <a href="/logout">Se déconnecter</a>
+    <div>
+        <h1>Faire une demande de contact</h1>
+        <form method="POST" action="/friend_request">
+            <input type="text" name="friend_name"/>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    {% for friend in requests %}
+        <li><a href="/accept_friend/{{ friend }}">Vous avez une demande de contact de {{ friend }}</a></li>
+    {% endfor %}
+</body>
+</html>
